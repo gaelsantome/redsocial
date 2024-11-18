@@ -217,7 +217,7 @@ public class RedSocial {
                     String nombrePostComentarioNumero = scanner.nextLine();
                     Usuario propietarioPostComentarioNumero = buscarUsuarioPorNombre(red, nombrePostComentarioNumero);
                     if (propietarioPostComentarioNumero != null) {
-                        System.out.print("Introduce el contenido del post (o una parte del mismo): ");
+                        System.out.print("Introduce el contenido del post: ");
                         String contenidoPostNumero = scanner.nextLine();
                         boolean encontrado = false;
                         for (Post post : propietarioPostComentarioNumero.getPosts()) {
@@ -248,7 +248,7 @@ public class RedSocial {
         }
     }
 
-    // Método auxiliar para buscar un usuario por nombre
+    // Bscar un usuario por nombre
     public static Usuario buscarUsuarioPorNombre(RedSocial red, String nombre) {
         for (Usuario usuario : red.usuarios) {
             if (usuario.getNombre().equalsIgnoreCase(nombre)) {
